@@ -166,7 +166,7 @@ $header_links = [
     <!-- Style -->
     <link rel="stylesheet" href="style.css"></style>
 </head>
-<body>
+<body class="position-relative">
     <header>
         <div class="container">
             <div class="row">

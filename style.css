@@ -35,6 +35,32 @@ a {
   margin: 0;
 }
 
+/* *******
+HEADER
+****** */
+
+/* 
+Margin al Body per porre l'header
+in position fixed
+*/
+
+body {
+  margin-top: 130px;
+}
+
+hr {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #fff;
+}
+
 figure {
   width: 100px;
   height: 40px;
