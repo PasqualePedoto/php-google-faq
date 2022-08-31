@@ -171,7 +171,7 @@ $header_links = [
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between p-3">
                        <div class="d-flex align-items-center justify-content-center">
                             <figure class="m-0 me-3">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Google_logo_%282010-2013%29.svg/2560px-Google_logo_%282010-2013%29.svg.png" alt="">
