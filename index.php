@@ -142,6 +142,20 @@ $header_links = [
     'Termini di servizio',
     'Domande frequenti',
 ];
+
+$footer_links = [
+    'Google',
+    'Tutto su Google',
+    'Privacy',
+    'Termini',
+];
+
+$header_select = [
+    'italiano',
+    'francese',
+    'tedesco',
+    'inglese',
+];
 ?>
 
 <!DOCTYPE html>
@@ -167,6 +181,7 @@ $header_links = [
     <link rel="stylesheet" href="style.css"></style>
 </head>
 <body class="position-relative">
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="row">
@@ -199,6 +214,7 @@ $header_links = [
             </div>
         </div>
     </header>
+    <!-- Main -->
     <main>
         <div class="container">
             <div class="row">
@@ -223,5 +239,33 @@ $header_links = [
             </div>
         </div>
     </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <section class="w-75 d-flex justify-content-between align-items-center">
+                            <ul class="d-flex align-items-center justify-content-center m-0 py-3">
+                                <?php foreach($footer_links as $link) : ?>
+                                <li class="me-3"><a href="#"><?php echo $link ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <div class="py-3 d-flex justify-content-center align-items-center">
+                                <div class="me-3">
+                                    <i class="fa-solid fa-comment-dots"></i>
+                                </div>
+                                <select name="language" id="language">
+                                    <?php foreach($header_select as $choice): ?>
+                                        <option value="<?php $choice ?>"><?php echo $choice ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
