@@ -63,9 +63,49 @@ $questions_and_answers = [
     [
         "question" => "Perché il mio account è associato a un paese?",
         "answers" => [
-            "i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.",
-            "i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.",
-            "i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi."
+            'Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose: <div class="innest-lists">
+            <ul class="style-type-decimal">
+                <li >
+                    La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla 
+                    privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+                    <ul class="style-type-alpha">
+                        <li class="">
+                            Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a
+                            Islanda, Liechtenstein e Norvegia) o in Svizzera.
+                        </li>
+                        <li class="">
+                            Google LLC, con sede negli Stati Uniti, per il resto del mondo.
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
+                </li>
+            </ul>
+            <p>
+                Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese 
+                a cui è associato il tuo account.
+            </p>
+            <div>
+                <h4>Stabilire il paese associato al tuo account</h4>
+                <ul class="my-pad-0">
+                    <li class="">
+                        Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account 
+                        creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso 
+                        più tempo nell\'ultimo anno.
+                    </li>
+                    <li class="">
+                        I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe
+                        occorrere circa un anno per aggiornare l\'associazione del paese.
+                    </li>
+                    <li class="">
+                        Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese 
+                        in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure 
+                        la residenza vicino a un confine territoriale. <a href="#">Contattaci</a> ritieni che il paese associato al tuo account sia sbagliato.
+                    </li>
+                </ul>
+            </div>
+        </div>',
             ]
     ],
     [
@@ -85,14 +125,14 @@ $questions_and_answers = [
         "question" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
         "answers" => [
             'In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di 
-            destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l\'URL della 
+            destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href="#">URL referrer</a>. Talvolta, l\'URL della 
             pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca 
             criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo 
             comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili 
-            qui. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API 
+            <a href="#">qui</a>. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API 
             (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\' esatte parole chiave che hanno 
             determinato il clic su un annuncio.',
-            ]
+            ] 
     ],
 ];
 ?>
@@ -103,7 +143,44 @@ $questions_and_answers = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <title>Document</title>
+    <!-- Style -->
+    <style>
+        /* Abbiamo tolto il pallino degli li */
+        ul li{
+            list-style-type: none;
+        }
+
+        /* Tolto l'underline del tag a */
+        a{
+            text-decoration: none;
+        }
+
+        .innest-lists .style-type-decimal{
+            list-style-type: decimal;
+        }
+
+        .innest-lists .style-type-alpha{
+            list-style-type: lower-alpha;
+        }
+
+        /* Azzeriamo il padding */
+        .my-pad-0{
+            padding: 0;
+        }
+
+        /* Gestiamo le liste innestate */
+        .innest-lists ul{
+            margin-top: 1rem;
+        }
+
+        .innest-lists ul li{
+            margin-top: 0.8rem;
+        }
+    </style>
 </head>
 <body>
     <section id="questions-and-answers">
