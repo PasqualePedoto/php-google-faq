@@ -144,58 +144,42 @@ $questions_and_answers = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- Document -->
+    <title>Google policy</title>
+
     <!-- Style -->
-    <style>
-        /* Abbiamo tolto il pallino degli li */
-        ul li{
-            list-style-type: none;
-        }
-
-        /* Tolto l'underline del tag a */
-        a{
-            text-decoration: none;
-        }
-
-        .innest-lists .style-type-decimal{
-            list-style-type: decimal;
-        }
-
-        .innest-lists .style-type-alpha{
-            list-style-type: lower-alpha;
-        }
-
-        /* Azzeriamo il padding */
-        .my-pad-0{
-            padding: 0;
-        }
-
-        /* Gestiamo le liste innestate */
-        .innest-lists ul{
-            margin-top: 1rem;
-        }
-
-        .innest-lists ul li{
-            margin-top: 0.8rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"></style>
 </head>
 <body>
-    <section id="questions-and-answers">
-        <ul>
-            <?php foreach($questions_and_answers as $question_and_answers) : ?>
-            <li>
-                <!-- Question -->
-                <h2><?php echo $question_and_answers['question'] ?></h2>
-                <?php foreach($question_and_answers['answers'] as $answer) : ?>
-                    <!-- Answers -->
-                    <p><?php echo $answer ?></p>
-                <?php endforeach; ?>
-            </li>
-            <?php endforeach; ?>
-        </ul>
-    </section>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                    <section id="questions-and-answers" class="w-75">
+                        <ul>
+                            <?php foreach($questions_and_answers as $question_and_answers) : ?>
+                            <li>
+                                <!-- Question -->
+                                <h2><?php echo $question_and_answers['question'] ?></h2>
+                                <?php foreach($question_and_answers['answers'] as $answer) : ?>
+                                <!-- Answers -->
+                                <p><?php echo $answer ?></p>
+                                <?php endforeach; ?>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

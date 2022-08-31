@@ -1,0 +1,35 @@
+/* Abbiamo tolto il pallino degli li */
+ul li {
+  list-style-type: none;
+}
+
+/* Tolto l'underline del tag a */
+a {
+  text-decoration: none;
+}
+
+.innest-lists .style-type-decimal {
+  list-style-type: decimal;
+}
+
+.innest-lists .style-type-alpha {
+  list-style-type: lower-alpha;
+}
+
+/* Azzeriamo il padding */
+.my-pad-0 {
+  padding: 0;
+}
+
+/* Gestiamo le liste innestate */
+.innest-lists ul {
+  margin-top: 1rem;
+}
+
+.innest-lists ul li {
+  margin-top: 0.8rem;
+}
+
+#questions-and-answers {
+  margin: 0;
+}
