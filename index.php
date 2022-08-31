@@ -135,6 +135,13 @@ $questions_and_answers = [
             ] 
     ],
 ];
+
+$header_links = [
+    'Introduzione',
+    'Norme sulla privacy',
+    'Termini di servizio',
+    'Domande frequenti',
+];
 ?>
 
 <!DOCTYPE html>
@@ -150,6 +157,9 @@ $questions_and_answers = [
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ddb740f05b.js" crossorigin="anonymous"></script>
+
     <!-- Document -->
     <title>Google policy</title>
 
@@ -157,6 +167,38 @@ $questions_and_answers = [
     <link rel="stylesheet" href="style.css"></style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                       <div class="d-flex align-items-center justify-content-center">
+                            <figure class="m-0 me-3">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Google_logo_%282010-2013%29.svg/2560px-Google_logo_%282010-2013%29.svg.png" alt="">
+                            </figure>
+                            <div class="h4">Privacy e Termini</div>
+                       </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-bars me-3"></i>
+                            <div class="user d-flex align-items-center justify-content-center">PP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <nav>
+                        <ul class="d-flex align-items-center">
+                            <?php foreach($header_links as $link) : ?>
+                            <li class="me-3"><a href="#"><?php echo $link ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
         <div class="container">
             <div class="row">
